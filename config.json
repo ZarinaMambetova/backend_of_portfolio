@@ -1,0 +1,21 @@
+{
+    "db": {
+        "host": "localhost",
+        "port": "27017",
+        "name": "admin",
+        "user": "",
+        "password": ""
+    },
+    "mail": {
+        "subject": "Сообщение с сайта",
+        "smtp": {
+            "host": "smtp.gmail.com",
+            "port": 465,
+            "secure": true,
+            "auth": {
+                "user": "example@gmail.com",
+                "pass": "weh99a61fi"
+            }
+        }
+    }
+}
