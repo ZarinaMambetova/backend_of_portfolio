@@ -4,10 +4,9 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var mongoose = require('mongoose')
+require('./models/db')
 var index = require('./routes/index');
-
-1
 
 
 var app = express();
@@ -22,6 +21,19 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// не работает:
+// app.use(session({
+//   secret: 'loftschool',
+//   cookie: {
+//     path: '/',
+//     httpOnly: true,
+//     maxAge: null
+//   },
+//   saveUninitialized: false,
+//   resave: false,
+//   store: new MongoStore({ mongooseConnection: mongoose.connection })
+// }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 

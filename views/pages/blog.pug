@@ -63,6 +63,19 @@ block content
                 | Впечатления о курсе "Веб для начинающих"
             span.sidebar__list-circle
         .entries
+          //-   ul.article-wrap
+          //- if (articles)
+          //-   each index in articles
+          //-       li.article
+          //-         .article__title= index.title
+          //-           - 
+          //-             var date= new Date(index.date).toLocaleDateString('ru', { 
+          //-                             year: 'numeric', 
+          //-                             month: '2-digit', 
+          //-                             day: '2-digit'
+          //-                             })
+          //-         time.article__data= date
+          //-         .article__text= index.body
           ul.entries__list
             li.entries__item
               .entry__content
