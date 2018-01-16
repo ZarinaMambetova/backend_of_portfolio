@@ -19,13 +19,14 @@ const apiOptions = {
 'use strict';
 
 
-    Schema = mongoose.Schema,
-    BlogSchema = new Schema({
+    const Schema = mongoose.Schema
+    
+    const BlogSchema = new Schema({
         title: {
             type: String,
             required: [true, 'Укажите заголовок статьи']
         },
-        body: {
+        text: {
             type: String,
             required: [true, 'Укажите содержимое статьи']
         },
