@@ -35,7 +35,7 @@ app.use(cookieParser());
 //   store: new MongoStore({ mongooseConnection: mongoose.connection })
 // }));
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(process.cwd(), 'public')));
 
 app.use('/', index);
 

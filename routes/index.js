@@ -19,6 +19,10 @@ router.get('/about', function(req, res) {
     res.render('pages/about', { title: 'Express' });
 });
 
+router.get('/blog', function (req, res) {
+    res.render('pages/blog', { title: 'Express' });
+});
+
 router.get('/getSkills', contrlAbout.getSkills)
 router.post('/addSkills', contrlAbout.addSkills)
 
@@ -30,8 +34,8 @@ router.post('/addSkills', contrlAbout.addSkills)
 // router.get('/getPosts', contrlBlog.getPosts)
 // router.post('/addPosts', contrlBlog.addPosts)
 
-router.get('/blog', contrlBlog.getArticles);
-router.post('/blog', contrlBlog.createArticle); // isAdmin
+router.get('/getarticle', contrlBlog.getArticles);
+router.post('/addPosts', contrlBlog.createArticle); // isAdmin
 router.put('/blog/:id', contrlBlog.editArticle); // isAdmin
 router.delete('/blog/:id', contrlBlog.deleteArticle); // isAdmin
 

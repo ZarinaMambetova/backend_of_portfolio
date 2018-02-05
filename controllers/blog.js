@@ -1,45 +1,5 @@
  const path = require('path')
-// const mongoose = require('mongoose')
 
-// module.exports.getPosts = function (req, res, next) {
-
-//     const defPosts = [{ 
-//             'fields.title': 'Новая статья',
-//                 'fields.date': '13.09.2019',
-//                     'fields.text': 'Веб-разработка — процесс создания веб-сайта или веб-приложения. Основными этапами процесса являются веб-дизайн, вёрстка страниц, программирование             для веб на стороне клиента и сервера, а также конфигурирование веб-сервера.(с)'
-//       }]
-
-// const posts = mongoose.model('posts')
-
-// posts.find().then(items => {
-//     if (!items.length) {
-//         res.status(200).json({ getPosts: defPosts })
-//     } else {
-//         res.status(200).json({ getPosts: item })
-//     }
-// })
-// }
-
-// module.exports.addPosts = function (req, res) {
-
-//     const data = req.body
-//     const Model = mongoose.model('posts')
-//     Model.db.dropDatabase()
-//     for (let i = 0; i < data.length; i++) {
-
-//         const item = new Model({
-//             title: data[i].title,
-//             data: data[i].data,
-//             text: data[i].text
-//         })
-
-//         item.save().then(item => {
-//             return res.status(200).json({ status: 'Успешно добавленно в базу' })
-//         }, err => {
-//             res.status(404).json({ status: 'При добовлении в базу произошла ошибка' + err })
-//         })
-//     }
-// }
 
 const mongoose = require('mongoose')
 
